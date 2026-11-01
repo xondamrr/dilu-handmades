@@ -1,13 +1,92 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dilu handmades</title>
-  <link rel="stylesheet" href="stil.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dilu handmades</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:wght@400;600&display=swap">
+<style>
+  :root {
+    --ink: #2a2238;
+    --paper: #f6f3fa;
+    --coral: #e8506a;
+    --teal: #1f8a8a;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Nunito Sans", system-ui, sans-serif; line-height: 1.6; }
+  header { padding: 56px 20px 40px; max-width: 720px; margin: 0 auto; }
+  h1 { font-family: "Young Serif", Georgia, serif; font-size: clamp(2.4rem, 8vw, 4rem); margin: 0 0 12px; line-height: 1.1; }
+  header p { font-size: 1.15rem; margin: 0; max-width: 46ch; }
+  h2 { font-family: "Young Serif", Georgia, serif; font-size: 1.8rem; margin: 0 0 20px; }
+  main, footer { max-width: 960px; margin: 0 auto; padding: 0 20px 56px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+  .product { background: var(--card); border-radius: 14px; overflow: hidden; border: 1px solid #e3dcee; }
+  .product img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #e3dcee; }
+  .info { padding: 14px 16px 18px; }
+  .info h3 { margin: 0 0 4px; font-size: 1.1rem; }
+  .price { color: var(--coral); font-weight: 600; margin: 0 0 12px; }
+  .buy { display: inline-block; font-weight: 600; color: var(--teal); text-decoration: none; border-bottom: 2px solid var(--teal); }
+  .contact { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 999px; text-decoration: none; font-weight: 600; color: #fff; }
+  .btn.tg { background: var(--teal); }
+  .btn.tel { background: var(--coral); }
+  .btn:focus-visible, .buy:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+</style>
 </head>
 <body>
+
+<header>
   <h1>Dilu handmades</h1>
-  <p>Munchoqdan qo'lda to'qilgan sumkacha va aksessuarlar</p>
+  <p>Munchoqdan qo'lda to'qilgan sumkacha va aksessuarlar. Har biri buyurtma asosida tayyorlanadi.</p>
+</header>
+
+<main>
+  <h2>Mahsulotlar</h2>
+  <div class="grid">
+
+    <!-- MAHSULOT 1: nusxa qilib ko'paytirsangiz bo'ladi. Rasm, nom va narxni o'zgartiring -->
+    <article class="product">
+      <img src="rasm1.jpg" alt="Munchoqli sumkacha">
+      <div class="info">
+        <h3>Munchoqli sumkacha</h3>
+        <p class="price">150 000 so'm</p>
+        <a class="buy" href="https://t.me/USERNAME">Buyurtma berish</a>
+      </div>
+    </article>
+
+    <!-- MAHSULOT 2 -->
+    <article class="product">
+      <img src="rasm2.jpg" alt="Munchoqli abadok">
+      <div class="info">
+        <h3>Abadok</h3>
+        <p class="price">80 000 so'm</p>
+        <a class="buy" href="https://t.me/USERNAME">Buyurtma berish</a>
+      </div>
+    </article>
+
+    <!-- MAHSULOT 3 -->
+    <article class="product">
+      <img src="rasm3.jpg" alt="Munchoqli aksessuar">
+      <div class="info">
+        <h3>Aksessuar</h3>
+        <p class="price">50 000 so'm</p>
+        <a class="buy" href="https://t.me/USERNAME">Buyurtma berish</a>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <h2>Buyurtma uchun yozing</h2>
+  <div class="contact">
+    <!-- USERNAME o'rniga Telegram username'ni (@ belgisiz) yozing -->
+    <a class="btn tg" href="https://t.me/USERNAME">Telegramda yozish</a>
+    <!-- Raqamni +998901234567 ko'rinishida, bo'sh joysiz yozing -->
+    <a class="btn tel" href="tel:+998901234567">Qo'ng'iroq qilish</a>
+  </div>
+</footer>
+
 </body>
 </html>
